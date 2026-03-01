@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>🧪 URL Shortener</h2>
+
+      <!-- Custom Shorten -->
+      <h4>🔧 Custom Shorten</h4>
+      <input type="text" id="url" placeholder="Enter long URL" />
+      <input type="text" id="shortcode" placeholder="Optional shortcode" />
+      <input type="number" id="validity" placeholder="Validity (minutes)" />
+      <button onclick="shorten()">Shorten Custom Link</button>
+
+      <div id="result" class="output"></div>
+
+      <hr />
+
+      <!-- Random Shorten -->
+      <h4>🎲 Random Shorten</h4>
+      <input
+        type="text"
+        id="randomUrl"
+        placeholder="URL for random shortening"
+      />
+      <button onclick="shortenRandom()">Shorten Random Link</button>
+
+      <div id="randomResult" class="output"></div>
+
+      <hr />
+
+      <!-- Analytics -->
+      <h4>Link Analytics</h4>
+      <input
+        type="text"
+        id="analyticsCode"
+        placeholder="Enter shortcode for analytics"
+      />
+      <button onclick="getAnalytics()">Get Analytics</button>
+
+      <div id="analyticsResult" class="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
