@@ -8,42 +8,36 @@
   </head>
   <body>
     <div class="container">
-      <h2>🧪 URL Shortener</h2>
+      <h2>URL Shortener</h2>
 
-      <!-- Custom Shorten -->
-      <h4>🔧 Custom Shorten</h4>
-      <input type="text" id="url" placeholder="Enter long URL" />
-      <input type="text" id="shortcode" placeholder="Optional shortcode" />
-      <input type="number" id="validity" placeholder="Validity (minutes)" />
-      <button onclick="shorten()">Shorten Custom Link</button>
-
-      <div id="result" class="output"></div>
-
-      <hr />
-
-      <!-- Random Shorten -->
-      <h4>🎲 Random Shorten</h4>
-      <input
-        type="text"
-        id="randomUrl"
-        placeholder="URL for random shortening"
-      />
-      <button onclick="shortenRandom()">Shorten Random Link</button>
-
-      <div id="randomResult" class="output"></div>
+      <section>
+        <h4><span>🔧</span> Custom Shorten</h4>
+        <input type="text" id="url" placeholder="Enter long URL (https://...)" />
+        <div style="display: flex; gap: 8px;">
+          <input type="text" id="shortcode" placeholder="Custom code" />
+          <input type="number" id="validity" placeholder="Mins" />
+        </div>
+        <button onclick="shorten()">Create Custom Link</button>
+        <div id="result" class="output"></div>
+      </section>
 
       <hr />
 
-      <!-- Analytics -->
-      <h4>Link Analytics</h4>
-      <input
-        type="text"
-        id="analyticsCode"
-        placeholder="Enter shortcode for analytics"
-      />
-      <button onclick="getAnalytics()">Get Analytics</button>
+      <section>
+        <h4><span>🎲</span> Random Shorten</h4>
+        <input type="text" id="randomUrl" placeholder="Enter long URL" />
+        <button onclick="shortenRandom()">Generate Link</button>
+        <div id="randomResult" class="output"></div>
+      </section>
 
-      <div id="analyticsResult" class="output"></div>
+      <hr />
+
+      <section>
+        <h4><span>📊</span> Link Analytics</h4>
+        <input type="text" id="analyticsCode" placeholder="Enter shortcode" />
+        <button onclick="getAnalytics()">Check Performance</button>
+        <div id="analyticsResult" class="output"></div>
+      </section>
     </div>
 
     <script src="script.js"></script>
